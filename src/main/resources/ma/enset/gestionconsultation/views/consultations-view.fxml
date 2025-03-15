@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.gestionconsultation.controllers.ConsultationController">
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="143.0" prefWidth="579.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="DATE DE CONSULTATION:" />
+                  <Label text="PATIENT:" GridPane.rowIndex="1" />
+                  <Label text="DESCRTIPTION:" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="dateConsultation" prefHeight="26.0" prefWidth="296.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="comboPatient" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextArea fx:id="textDescription" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+            <HBox prefHeight="109.0" prefWidth="579.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnAddConsultation" mnemonicParsing="false" text="AJOUTER" onAction="#addConsultation"/>
+                  <Button fx:id="btnUpdateConsultation" mnemonicParsing="false" text="MODIFIER" onAction="#updateConsultation"/>
+                  <Button fx:id="btnDeleteConsultation" mnemonicParsing="false" text="SUPPRIMER" onAction="#deleteConsultation"/>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableConsultation" prefHeight="455.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnIdConsultation" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="columnDateConsultation" prefWidth="181.60003662109375" text="DATE DE CONSULTATION" />
+            <TableColumn fx:id="columnDescription" prefWidth="211.199951171875" text="DESCRIPTION" />
+            <TableColumn fx:id="columnPatient" prefWidth="128.00006103515625" text="PATIENT" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

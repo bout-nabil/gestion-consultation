@@ -1,0 +1,79 @@
+/* Style général */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f4f4f4;
+}
+
+/* Style des TabPane */
+.tab-pane {
+    -fx-tab-min-width: 100px;
+    -fx-tab-max-width: 250px;
+    -fx-tab-min-height: 50px;
+    -fx-background-color: white;
+}
+
+.tab {
+    -fx-background-color: #ddd;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+}
+
+.tab:selected {
+    -fx-background-color: #119fea;
+    -fx-text-fill: white;
+}
+
+/* Style des labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+/* Style des champs de texte et textarea */
+.text-field, .text-area {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 250px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.text-area {
+    -fx-pref-height: 100px;
+}
+
+/* Style des boutons */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Style des tables */
+.table-view {
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Espacement des composants */
+.hbox, .vbox {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+}
